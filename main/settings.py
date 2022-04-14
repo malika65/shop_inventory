@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['bereketgrand.herokuapp.com']
 
+CORS_ALLOWED_ORIGINS = [
+    "https://bereketgrand.herokuapp.com"
+]
 
 # Application definition
 
