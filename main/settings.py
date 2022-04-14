@@ -25,8 +25,9 @@ SECRET_KEY = 'django-insecure-s011#oh$4j41erb-ux5r0pn5n=*28f2q1*16%sc)7$)6wgw++8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bereketgrand.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = ['https://bereketgrand.herokuapp.com']
 CORS_ALLOWED_ORIGINS = [
     "https://bereketgrand.herokuapp.com"
 ]
