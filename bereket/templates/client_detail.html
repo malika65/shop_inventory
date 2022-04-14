@@ -1,0 +1,147 @@
+{% load static %}
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Installment</title>
+    <link rel="stylesheet" href="{% static 'nicepage.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'client_detail.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'nicepage.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 4.8.2, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+    <meta name="theme-color" content="#803bec">
+    <meta property="og:title" content="client_detail">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body u-xl-mode"><header class="u-clearfix u-header u-header" id="sec-8624"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
+                <p class="u-custom-item u-text u-text-4"><a style="color: black;" href="{% url 'bereket:product_list' %}">ТОВАРЫ</a><br>
+                </p>
+              </div>
+            </div>
+             <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+                <p class="u-custom-item u-text u-text-2"><a style="color: black;" href="{% url 'bereket:sales' %}">ПРОДАЖИ</a><br>
+                </p>
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
+                <p class="u-custom-item u-text u-text-1">
+                  <span class="u-text-palette-1-light-1"><a style="color: black;" href="{% url 'bereket:installment' %}">РАССРОЧКА</a></span>
+                  <br>
+                </p>
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+                <p class="u-custom-item u-text u-text-2"><a style="color: black;" href="{% url 'bereket:cash' %}">НАЛИЧНЫЕ</a><br>
+                </p>
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
+                <p class="u-custom-item u-text u-text-3"><a style="color: black;" href="{% url 'bereket:clients' %}">КЛИЕНТЫ</a><br>
+                </p>
+              </div>
+              <div style="margin-left: 30px" class="u-container-layout u-similar-container u-valign-top u-container-layout-5">
+                <p class="u-custom-item u-text u-text-4">ВЫЙТИ<br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div></header>
+    <section class="u-align-center u-clearfix " id="carousel_2ef3">
+      <div class="u-clearfix u-sheet"><!--product--><!--product_options_json--><!--{"source":""}--><!--/product_options_json--><!--product_item-->
+        <div class="u-container-style u-expanded-width u-product u-product-1">
+          <div class="u-container-layout u-valign-top-sm u-valign-top-xs u-container-layout-1">
+            <div class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-shape-rectangle u-group-1">
+              <div class="u-container-layout u-container-layout-2">
+                <div class="u-border-3 u-border-palette-4-base u-line u-line-horizontal u-line-1"></div><!--product_title-->
+                <h2 class="u-custom-font u-font-merriweather u-product-control u-text u-text-1">
+                  <a><!--product_title_content-->{{client.surname}} {{client.name}} {{client.lastname}}<!--/product_title_content--></a>
+                </h2><!--/product_title--><!--product_price-->
+                <div class="u-custom-font u-font-merriweather u-product-control u-product-price u-product-price-1">
+                  <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
+                    <div class="u-price u-text-palette-4-base" style="font-size: 1.5rem; font-weight: 700;"><!--product_regular_price_content-->ID паспорта: <a style="color: black;">{{client.passport_id}}</a><!--/product_regular_price_content--></div><!--/product_regular_price-->
+                  </div>
+                  <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
+                    <div class="u-price u-text-palette-4-base" style="font-size: 1.5rem; font-weight: 700;"><!--product_regular_price_content-->Срок действия паспорта: <a style="color: black;">{{client.validity|date}}</a><!--/product_regular_price_content--></div><!--/product_regular_price-->
+                  </div>
+                  <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
+                    <div class="u-price u-text-palette-4-base" style="font-size: 1.5rem; font-weight: 700;"><!--product_regular_price_content-->Орган выдачи: <a style="color: black;">{{client.who_gave}}</a><!--/product_regular_price_content--></div><!--/product_regular_price-->
+                  </div>
+
+                </div><!--/product_price--><!--product_content-->
+              </div>
+            </div>
+          </div>
+        </div><!--/product_item--><!--/product-->
+      </div>
+    </section>
+    <section style="margin-bottom: 20px" class="u-clearfix u-white u-section-2" id="carousel_f4f0">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-default u-text-1">История рассрочек:</h2>
+        <div class="u-expanded-width u-table u-table-responsive u-table-1">
+          <table class="u-table-entity">
+            <colgroup>
+              <col width="17%">
+              <col width="17%">
+              <col width="17%">
+              <col width="17%">
+              <col width="17%">
+              <col width="10%">
+            </colgroup>
+            <tbody class="u-table-alt-palette-1-light-3 u-table-body">
+              <tr style="height: 65px;">
+                <td class="u-table-cell">Товар</td>
+                <td class="u-table-cell">Срок рассрочки</td>
+                <td class="u-table-cell">Стоимость товара</td>
+                <td class="u-table-cell">Первый взнос</td>
+                <td class="u-table-cell">Остаток</td>
+                <td class="u-table-cell">Оплата</td>
+              </tr>
+              {% for sale in sales %}
+                <tr style="height: 65px;">
+                  <td class="u-table-cell">{{sale.product.name}}</td>
+                  <td class="u-table-cell">{{sale.installment_period}}</td>
+                  <td class="u-table-cell">{{sale.product.price}}</td>
+                  <td class="u-table-cell">{{sale.first_payment}}</td>
+                  <td class="u-table-cell">{{sale.rest}}</td>
+                  {% if sale.rest <= 0 %}
+                    <td class="u-table-cell"><a>Погашена</a></td>
+                  {% elif sale.rest >= 0 %}
+                    <td class="u-table-cell"><a href="{% url 'bereket:add_transaction' client_id=sale.client.id sale_id=sale.id %}">Добавить</a></td>
+                  {% endif %}
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-a418"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Берекет Гранд<br>адрес г. Бишкек Проспект Чуй 129
+        </p>
+      </div></footer>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+{% load static %}
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Mobil​e application development, Make things you love., Start running today, webuilddigital., Mobile App Development, Our Team, Using design to improve product development, Get in touch">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'nicepage.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'cash.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'nicepage.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 4.8.2, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+    <meta name="theme-color" content="#803bec">
+    <meta property="og:title" content="cash">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body u-xl-mode"><header class="u-clearfix u-header u-header" id="sec-8624"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
+                <p class="u-custom-item u-text u-text-4"><a style="color: black;" href="{% url 'bereket:product_list' %}">ТОВАРЫ</a><br>
+                </p>
+              </div>
+            </div>
+             <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+                <p class="u-custom-item u-text u-text-2"><a style="color: black;" href="{% url 'bereket:sales' %}">ПРОДАЖИ</a><br>
+                </p>
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
+                <p class="u-custom-item u-text u-text-1">
+                  <span class="u-text-palette-1-light-1"><a style="color: black;" href="{% url 'bereket:installment' %}">РАССРОЧКА</a></span>
+                  <br>
+                </p>
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+                <p class="u-custom-item u-text u-text-2"><a style="color: #a473f2;" href="{% url 'bereket:cash' %}">НАЛИЧНЫЕ</a><br>
+                </p>
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
+                <p class="u-custom-item u-text u-text-3"><a style="color: black;" href="{% url 'bereket:clients' %}">КЛИЕНТЫ</a><br>
+                </p>
+              </div>
+              <div style="margin-left: 30px" class="u-container-layout u-similar-container u-valign-top u-container-layout-5">
+                <p class="u-custom-item u-text u-text-4"><a style="color: black;" href="{% url 'bereket:logout' %}">ВЫЙТИ</a><br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div></header>
+    <section class="u-align-center u-clearfix u-section-1" id="sec-1808">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1"></div>
+    </section>
+    <section style="margin-right: 500px" class="u-align-center u-clearfix u-section-2" id="sec-2a2c">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-form u-form-1">
+          <form action="#" method="POST" class="u-clearfix u-form-spacing-15" style="padding: 25px;" source="email" name="form">
+            <div style="margin-left: 200px" class="u-form-group u-form-select u-label-left u-form-group-1">
+              <label for="select-1188" class="u-label">Выберите товар</label>
+              <div class="u-form-select-wrapper">
+                <select id="select-1188" name="select-1" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-7" required="required">
+                  {% for product in products %}
+                    <option value={{product.name}}>{{product.name}}</option>
+                  {% endfor %}
+                </select>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
+              </div>
+            </div>
+            <br>
+            <div style="margin-left: 200px" class="u-form-group u-label-left u-form-group-2">
+              <label style="margin-top: 30px" class="u-label">Стоимость</label>
+                  {% csrf_token %}
+                  {{ cash_form.as_p }}
+            </div>
+            <div style="margin-left: 350px">
+              <button type="submit" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-28 u-btn-1">Сохранить<br></button>
+              <input type="submit" value="submit" class="u-form-control-hidden">
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+    <footer style="padding-bottom: 85px" class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-a418"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Берекет Гранд<br>адрес г. Бишкек Проспект Чуй 129
+        </p>
+      </div></footer>
+  </body>
+</html>

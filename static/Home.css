@@ -1,0 +1,111 @@
+ .u-section-1 {
+  min-height: 500px;
+}
+
+.u-section-1 .u-image-1 {
+  width: 1190px;
+  height: 623px;
+  margin: -123px 0 0 auto;
+}
+
+.u-section-1 .u-form-1 {
+  width: 465px;
+  margin-top: -391px;
+  margin-left: calc(((100% - 1140px) / 2) + 363px);
+  margin-bottom: 0;
+  height: 181px;
+}
+
+.u-section-1 .u-text-1 {
+  font-weight: 700;
+  font-size: 3.75rem;
+  margin: -281px calc(((100% - 1140px) / 2) + 303px) 60px calc(((100% - 1140px) / 2) + 336px);
+}
+
+@media (max-width: 1199px) {
+   .u-section-1 {
+    min-height: 369px;
+  }
+
+  .u-section-1 .u-image-1 {
+    width: 940px;
+    height: 492px;
+  }
+
+  .u-section-1 .u-form-1 {
+    margin-top: -259px;
+    margin-left: calc(((100% - 940px) / 2) + 363px);
+  }
+
+  .u-section-1 .u-text-1 {
+    width: 345px;
+    margin-right: 413px;
+    margin-left: calc(((100% - 940px) / 2) + 400px);
+  }
+}
+
+@media (max-width: 991px) {
+   .u-section-1 {
+    min-height: 254px;
+  }
+
+  .u-section-1 .u-image-1 {
+    width: 720px;
+    height: 377px;
+  }
+
+  .u-section-1 .u-form-1 {
+    margin-top: -144px;
+    margin-left: calc(((100% - 720px) / 2) + 255px);
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-right: 316px;
+    margin-left: calc(((100% - 720px) / 2) + 306px);
+  }
+}
+
+@media (max-width: 767px) {
+   .u-section-1 {
+    min-height: 160px;
+  }
+
+  .u-section-1 .u-image-1 {
+    width: 540px;
+    height: 283px;
+  }
+
+  .u-section-1 .u-form-1 {
+    margin-top: -50px;
+    margin-left: calc(((100% - 540px) / 2) + 75px);
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-right: 237px;
+    margin-left: calc(((100% - 540px) / 2) + 230px);
+  }
+}
+
+@media (max-width: 575px) {
+   .u-section-1 {
+    min-height: 55px;
+  }
+
+  .u-section-1 .u-image-1 {
+    width: 340px;
+    height: 178px;
+  }
+
+  .u-section-1 .u-form-1 {
+    width: 340px;
+    margin-top: 55px;
+    margin-left: calc(((100% - 340px) / 2));
+  }
+
+  .u-section-1 .u-text-1 {
+    width: 340px;
+    font-size: 1.5rem;
+    margin-right: 149px;
+    margin-left: calc(((100% - 340px) / 2) + 145px);
+  }
+}

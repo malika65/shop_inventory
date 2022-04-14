@@ -1,0 +1,63 @@
+{% load static %}
+
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Mobil​e application development, Make things you love., Start running today, webuilddigital., Mobile App Development, Our Team, Using design to improve product development, Get in touch">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Index</title>
+    <link rel="stylesheet" href="{% static 'nicepage.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'main.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'nicepage.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 4.8.2, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+
+
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+    <meta name="theme-color" content="#803bec">
+    <meta property="og:title" content="main">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body u-xl-mode">
+    <section style="height: 860px; width: 1500px; background-image: url('https://img.lovepik.com/background/20211021/large/lovepik-background-of-technology-conference-for-color-and-image_400142499.jpg'); background-size: cover;" class="u-clearfix u-section-1" id="sec-81de">
+     <div style="padding-left: 500px; padding-top: 200px" class="u-clearfix u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout">
+          <div class="u-layout-row">
+            <div class="u-container-style u-layout-cell u-left-cell u-size-26-xl u-size-28-md u-size-28-sm u-size-28-xs u-size-29-lg u-layout-cell-1">
+              <div class="u-container-layout u-container-layout-1">
+                <h2 style="color: #FFFFFF; font-size: 50px" class="u-align-left u-text u-text-1">БЕРЕКЕТ ГРАНД</h2>
+                <br>
+                <div class="u-form u-form-1">
+                    {% if errors %}
+                    <div style="color: red">
+                        {{errors}}
+                    </div>
+                    {% endif %}
+                  <form action="." method="post">
+                      {{ form.as_p }}
+                      {% csrf_token %}
+                    <div class="u-align-center u-form-group u-form-submit">
+                      <button type="submit" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-28 u-btn-1">Войти<br>
+                      </button>
+                      <input type="submit" value="submit" class="u-form-control-hidden">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="u-align-right u-container-style u-image u-layout-cell u-right-cell u-size-31-lg u-size-32-md u-size-32-sm u-size-32-xs u-size-34-xl u-image-1" data-image-width="1288" data-image-height="1080">
+              <div class="u-container-layout u-container-layout-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

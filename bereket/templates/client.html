@@ -1,0 +1,123 @@
+{% load static %}
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Mobil​e application development, Make things you love., Start running today, webuilddigital., Mobile App Development, Our Team, Using design to improve product development, Get in touch">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Client</title>
+    <link rel="stylesheet" href="{% static 'nicepage.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'Home.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'nicepage.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 4.8.2, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+    <meta name="theme-color" content="#803bec">
+    <meta property="og:title" content="client">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body u-xl-mode"><header class="u-clearfix u-header u-header" id="sec-8624"><div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
+                <p class="u-custom-item u-text u-text-4"><a style="color: black;" href="{% url 'bereket:product_list' %}">ТОВАРЫ</a><br>
+                </p>
+              </div>
+            </div>
+             <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+                <p class="u-custom-item u-text u-text-2"><a style="color: black;" href="{% url 'bereket:sales' %}">ПРОДАЖИ</a><br>
+                </p>
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
+                <p class="u-custom-item u-text u-text-1">
+                  <span class="u-text-palette-1-light-1"><a style="color: black;" href="{% url 'bereket:installment' %}">РАССРОЧКА</a></span>
+                  <br>
+                </p>
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+                <p class="u-custom-item u-text u-text-2"><a style="color: black;" href="{% url 'bereket:cash' %}">НАЛИЧНЫЕ</a><br>
+                </p>
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
+                <p class="u-custom-item u-text u-text-3"><a style="color: #a473f2;" href="{% url 'bereket:clients' %}">КЛИЕНТЫ</a><br>
+                </p>
+              </div>
+              <div style="margin-left: 30px" class="u-container-layout u-similar-container u-valign-top u-container-layout-5">
+                <p class="u-custom-item u-text u-text-4"><a style="color: black;" href="{% url 'bereket:logout' %}">ВЫЙТИ</a><br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div></header>
+    <section class="u-align-center u-clearfix u-section-1" id="sec-11c4">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-expanded-width u-table u-table-responsive u-table-1">
+          <table style="margin-bottom: 20px; margin-top: 20px" class="u-table-entity u-table-entity-1">
+            <colgroup>
+              <col width="25%">
+              <col width="25%">
+              <col width="25%">
+              <col width="25%">
+              <col width="15%">
+            </colgroup>
+            <thead class="u-palette-4-base u-table-header u-table-header-1">
+              <tr style="height: 21px;">
+                <th class="u-border-1 u-border-palette-4-base u-table-cell">ФИО клиента</th>
+                <th class="u-border-1 u-border-palette-4-base u-table-cell">ID паспорта</th>
+                <th class="u-border-1 u-border-palette-4-base u-table-cell">Срок действия паспорта</th>
+                <th class="u-border-1 u-border-palette-4-base u-table-cell">Номер телефона</th>
+                <th class="u-border-1 u-border-palette-4-base u-table-cell">Посмотреть товары</th>
+                <th class="u-border-1 u-border-palette-4-base u-table-cell">Добавить рассрочку</th>
+              </tr>
+            </thead>
+            <tbody class="u-table-body">
+              {% for client in clients %}
+                <tr style="height: 76px;">
+                  <td class="u-border-1 u-border-grey-30 u-first-column u-palette-4-light-3 u-table-cell">{{client.name}} {{client.surname}} {{client.lastname}}</td>
+                  <td class="u-border-1 u-border-grey-30 u-table-cell">{{client.passport_id}}</td>
+                  <td class="u-border-1 u-border-grey-30 u-table-cell">{{client.validity|date}}</td>
+                  <td class="u-border-1 u-border-grey-30 u-table-cell">{{client.phone_number}}</td>
+                  <td class="u-border-1 u-border-palette-4-base u-table-cell"><a href="{% url 'bereket:client_detail' client.id %}">История</a></button></td>
+                  <td class="u-border-1 u-border-palette-4-base u-table-cell"><a href="{% url 'bereket:installment_for_exist_client' client.id %}">Добавить</a></button></td>
+
+                </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-a418"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Берекет Гранд<br>адрес г. Бишкек Проспект Чуй 129
+        </p>
+      </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+        <span>Website Templates</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="" target="_blank">
+        <span>Website Builder Software</span>
+      </a>. 
+    </section>
+  </body>
+</html>
